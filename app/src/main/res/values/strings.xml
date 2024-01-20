@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LibraryApp</string>
+    <string name="title_rents">Rents</string>
+    <string name="title_persons">Persons</string>
+    <string name="title_positions">Positions</string>
+    <string name="add_position">Add</string>
+    <string name="rent_label">Status: Wypożyczono</string>
+    <string name="return_label">Status: Zwrócono</string>
+</resources>
