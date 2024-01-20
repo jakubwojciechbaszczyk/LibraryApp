@@ -11,6 +11,10 @@ import com.example.libraryapp.adapters.PersonAdapter
 import com.example.libraryapp.data.person.Person
 import com.example.libraryapp.databinding.FragmentPersonsBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 class PersonsFragment : Fragment() {
@@ -37,12 +41,12 @@ class PersonsFragment : Fragment() {
 
         personRecyclerView.adapter = adapter
         personRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-
         viewModel.allPersons.observe(viewLifecycleOwner) {item ->
             item?.let {
                 adapter.submitList(it)
             }
         }
+
 
         return root
     }
@@ -50,6 +54,19 @@ class PersonsFragment : Fragment() {
     fun showHireDialog(person: Person) {
         RentDialogFragment(person).show(childFragmentManager, "RentDialogFragment")
     }
+
+//    private fun loadData(adapter: PersonAdapter, persons: List<Person>) {
+//        // Uruchomienie korutyny na głównym wątku
+//        CoroutineScope(Dispatchers.Main).launch {
+//            // Symulacja zadania trwającego dłuższy czas
+//            withContext(Dispatchers.IO) {
+//                adapter.submitList(persons)
+//          //  }
+//
+//            // Ukryj pasek postępu po zakończeniu ładowania danych
+//            binding.progressBar.visibility = View.GONE
+//        }
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()

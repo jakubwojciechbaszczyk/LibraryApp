@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -28,6 +29,8 @@ import com.example.libraryapp.ui.person.PersonsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.singleOrNull
+import kotlinx.coroutines.flow.toList
 import javax.inject.Inject
 
 
@@ -37,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     @Inject lateinit var repository: PersonRepository
     private lateinit var binding: ActivityMainBinding
     private val CONTACTS_PERMISSION_CODE = 123
-    lateinit var persons: MutableList<Person>
+    var persons: List<Person> = emptyList()
     private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {

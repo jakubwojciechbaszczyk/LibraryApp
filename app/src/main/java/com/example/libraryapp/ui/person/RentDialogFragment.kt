@@ -14,7 +14,9 @@ import com.example.libraryapp.adapters.PositionAdapter
 import com.example.libraryapp.data.person.Person
 import com.example.libraryapp.data.position.Position
 import com.example.libraryapp.databinding.DialogWithRecyclerviewBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RentDialogFragment(private val person: Person): DialogFragment() {
     private val viewModel: PersonsViewModel by viewModels() //{
 //        PersonViewModelFactory(
