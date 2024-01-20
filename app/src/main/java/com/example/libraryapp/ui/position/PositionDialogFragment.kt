@@ -1,4 +1,4 @@
-package com.example.libraryapp.ui.dashboard
+package com.example.libraryapp.ui.position
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
-import com.example.libraryapp.LibraryAppApplication
 import com.example.libraryapp.R
 import com.example.libraryapp.data.position.Position
 import dagger.hilt.android.AndroidEntryPoint

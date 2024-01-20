@@ -24,7 +24,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.libraryapp.data.person.Person
 import com.example.libraryapp.data.person.PersonRepository
 import com.example.libraryapp.databinding.ActivityMainBinding
-import com.example.libraryapp.ui.notifications.PersonsFragment
+import com.example.libraryapp.ui.person.PersonsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*

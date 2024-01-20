@@ -1,4 +1,4 @@
-package com.example.libraryapp.ui.home
+package com.example.libraryapp.ui.rent
 
 import androidx.lifecycle.*
 import com.example.libraryapp.data.rent.Rent

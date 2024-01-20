@@ -1,7 +1,6 @@
-package com.example.libraryapp.ui.notifications
+package com.example.libraryapp.ui.person
 
 import androidx.lifecycle.*
-import com.example.libraryapp.data.*
 import com.example.libraryapp.data.person.Person
 import com.example.libraryapp.data.person.PersonRepository
 import com.example.libraryapp.data.position.Position

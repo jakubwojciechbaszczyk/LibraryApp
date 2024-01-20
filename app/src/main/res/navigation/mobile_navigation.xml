@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_rents"
-        android:name="com.example.libraryapp.ui.home.RentsFragment"
+        android:name="com.example.libraryapp.ui.rent.RentsFragment"
         android:label="@string/title_rents"
         tools:layout="@layout/fragment_persons" />
 
     <fragment
         android:id="@+id/navigation_positions"
-        android:name="com.example.libraryapp.ui.dashboard.PositionsFragment"
+        android:name="com.example.libraryapp.ui.position.PositionsFragment"
         android:label="@string/title_persons"
         tools:layout="@layout/fragment_positions" />
 
     <fragment
         android:id="@+id/navigation_persons"
-        android:name="com.example.libraryapp.ui.notifications.PersonsFragment"
+        android:name="com.example.libraryapp.ui.person.PersonsFragment"
         android:label="@string/title_positions"
         tools:layout="@layout/fragment_rents" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.libraryapp.ui.dashboard
+package com.example.libraryapp.ui.position
 
 import androidx.lifecycle.*
 import com.example.libraryapp.data.position.Position

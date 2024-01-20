@@ -1,4 +1,4 @@
-package com.example.libraryapp.ui.notifications
+package com.example.libraryapp.ui.person
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.libraryapp.LibraryAppApplication
 import com.example.libraryapp.adapters.PersonAdapter
 import com.example.libraryapp.data.person.Person
 import com.example.libraryapp.databinding.FragmentPersonsBinding
