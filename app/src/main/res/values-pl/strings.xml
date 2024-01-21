@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rent_label">Status: Wypożyczono</string>
+    <string name="return_label">Status: Zwrócono</string>
+    <string name="title_rents">Wypożycz</string>
+    <string name="title_persons">Osoby</string>
+    <string name="title_positions">Pozycje</string>
+
+</resources>

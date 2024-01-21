@@ -41,32 +41,25 @@ class PersonsFragment : Fragment() {
 
         personRecyclerView.adapter = adapter
         personRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        viewModel.allPersons.observe(viewLifecycleOwner) {item ->
+        viewModel.allPersons.observe(viewLifecycleOwner) { item ->
             item?.let {
-                adapter.submitList(it)
+                loadData(adapter, it)
             }
         }
-
 
         return root
     }
 
-    fun showHireDialog(person: Person) {
+    private fun showHireDialog(person: Person) {
         RentDialogFragment(person).show(childFragmentManager, "RentDialogFragment")
     }
 
-//    private fun loadData(adapter: PersonAdapter, persons: List<Person>) {
-//        // Uruchomienie korutyny na głównym wątku
-//        CoroutineScope(Dispatchers.Main).launch {
-//            // Symulacja zadania trwającego dłuższy czas
-//            withContext(Dispatchers.IO) {
-//                adapter.submitList(persons)
-//          //  }
-//
-//            // Ukryj pasek postępu po zakończeniu ładowania danych
-//            binding.progressBar.visibility = View.GONE
-//        }
-//    }
+    private fun loadData(adapter: PersonAdapter, persons: List<Person>) {
+        CoroutineScope(Dispatchers.Main).launch {
+            adapter.submitList(persons)
+            binding.progressBar.visibility = View.GONE
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

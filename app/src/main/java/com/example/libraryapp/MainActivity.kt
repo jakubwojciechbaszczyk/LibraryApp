@@ -82,6 +82,7 @@ class MainActivity : AppCompatActivity() {
         when (requestCode) {
             CONTACTS_PERMISSION_CODE -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    progressBar.visibility = View.VISIBLE
                     lifecycleScope.launch { loadContacts() }
                    // smsPermissions()
                 } else {
@@ -110,9 +111,6 @@ class MainActivity : AppCompatActivity() {
     private fun savePersons() {
         lifecycleScope.launch {
             try {
-//                for (i in persons) {
-//                    repository.insert(i)
-//                }
                 repository.insert(persons)
             } catch (e: Exception) {
                 Log.e("SavePersons", "Error saving persons: ${e.message}", e)
